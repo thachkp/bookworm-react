@@ -9,6 +9,14 @@ export default {
             } catch (error) {
                 throw error;
             }
+        },
+        signup: async (user) => {
+            try {
+                const res = await axios.post('/api/users', {user})
+                return res.data.user;
+            } catch (error) {
+                throw error;
+            }
         }
     }
 }
