@@ -17,6 +17,14 @@ export default {
             } catch (error) {
                 throw error;
             }
+        },
+        confirm: async (token) => {
+            try {
+                const res = await axios.post('/api/auth/confirmation', {token})
+                return res.data.user;
+            } catch (error) {
+                throw error;
+            }
         }
     }
 }
