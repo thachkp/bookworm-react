@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types"
 import { connect } from "react-redux";
-import { Message, Icon, MessageContent, MessageHeader } from 'semantic-ui-react';
+import { Message, Icon, MessageContent, MessageHeader, Button } from 'semantic-ui-react';
 import { Link } from "react-router-dom";
 import { confirm } from "../../actions/auth";
 
@@ -47,6 +47,7 @@ class ConfirmationPage extends React.Component {
                             <MessageHeader>
                                 Oooops. invalid token it seems
                             </MessageHeader>
+                            <Button>click here to resend</Button>
                         </MessageContent>
                     </Message>
                 )}

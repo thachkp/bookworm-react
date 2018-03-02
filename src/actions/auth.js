@@ -31,3 +31,9 @@ export const confirm = (token) => (dispatch) => api.user.confirm(token)
     localStorage.bookwormJWT = user.token;
     dispatch(userloggedIn(user));
 })
+
+export const resetPasswordRequest = ({ email }) => () =>
+    api.user.resetPasswordRequest(email);
+
+export const validateToken = (token) => () =>
+    api.user.validateToken(token);

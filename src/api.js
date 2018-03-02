@@ -25,6 +25,23 @@ export default {
             } catch (error) {
                 throw error;
             }
-        }
+        },
+        resetPasswordRequest: async email => {
+            try {
+                const res = await axios.post('/api/auth/reset_password_request', {email})
+                return res.data.user;
+            } catch (error) {
+                throw error;
+            }
+        },
+        validateToken: async token => {
+            try {
+                const res = await axios.post('/api/auth/validate_token', {token})
+                return res.data.user;
+            } catch (error) {
+                throw error;
+            }
+        },
+
     }
 }
