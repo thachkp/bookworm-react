@@ -11,7 +11,7 @@ class LoginPage extends React.Component {
     submit = async data => {
         try {
             await this.props.login(data);
-            this.props.history.push("/dashboard")
+            this.props.history.push("/dashboard");
         } catch (error) {
             throw error;
         }

@@ -42,6 +42,14 @@ export default {
                 throw error;
             }
         },
+        resetPassword: async data => {
+            try {
+                const res = await axios.post('/api/auth/reset_password', {data});
+                return res.data.user;
+            } catch (error) {
+                throw error;
+            }
+        }
 
     }
 }
